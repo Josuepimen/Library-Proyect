@@ -1,0 +1,36 @@
+body {
+    background-color: #f0f0f0; /* Color de fondo claro */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  }
+  
+  .bg-white {
+    background-color: #ffffff; /* Color de fondo del contenedor */
+  }
+  
+  .text-blue-600 {
+    color: #2563eb; /* Color azul moderno para iconos y textos */
+  }
+  
+  .text-gray-800 {
+    color: #1f2937; /* Color gris oscuro para títulos */
+  }
+  
+  .border-gray-300 {
+    border-color: #d1d5db; /* Color gris claro para bordes */
+  }
+  
+  .bg-gray-100 {
+    background-color: #f3f4f6; /* Color gris claro para los elementos de la lista */
+  }
+  
+  .hover\:bg-gray-200:hover {
+    background-color: #e5e7eb; /* Color gris más oscuro al pasar el mouse */
+  }
+  
+  .hover\:scale-105:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+  }
+  
+  .transition {
+    transition: all 0.3s ease; /* Transiciones suaves */
+  }
