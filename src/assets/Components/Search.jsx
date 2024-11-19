@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GiBookmarklet } from "react-icons/gi";
+import './styles.css'; 
 
 function Search() {
   const [query, setQuery] = useState("");
@@ -31,22 +32,21 @@ function Search() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-slate-300 rounded-lg shadow-md relative top-10">
-      <GiBookmarklet className="w-8 h-8" />
-      <h1 className="text-2xl font-bold text-center mb-4">Search for Books</h1>
-      <form className="flex mb-4" onSubmit={handleSearch}>
+    <div className="max-w-2xl mx-auto p-6 bg-slate-400  rounded-lg shadow-lg relative top-10">
+      <GiBookmarklet className="w-8 h-8 text-black" />
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Search for Books</h1>
+      <form className="flex mb-6" onSubmit={handleSearch}>
         <input
           type="text"
-          className="flex-1 p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 p-3 border border-gray-500 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a book..."
           required
         />
-
         <button
           type="submit"
-          className="px-6 bg-blue-500 text-white rounded-r-md hover:bg-blue-600 transition duration-200"
+          className="px-6 bg-blue-600 text-white rounded-r-md hover:bg-blue-700 transition duration-300"
         >
           Search
         </button>
@@ -57,18 +57,16 @@ function Search() {
 
       {results.length > 0 && (
         <div className="max-h-80 overflow-y-auto">
-          {" "}
-          {/* Contenedor para habilitar scroll */}
           <ul className="space-y-4">
             {results.map((book) => (
               <li
                 key={book.key}
-                className="p-4 border border-gray-300 rounded-md bg-gray-50 hover:bg-slate-200 hover:scale-105 transition duration-200 transform"
+                className="p-4 border border-gray-300 rounded-md bg-gray-100 cursor-pointer hover:bg-gray-200 hover:scale-90 transition duration-300 transform"
               >
-                <h2 className="text-xl font-semibold text-blue-600">
+                <h2 className="text-xl font-semibold text-gray-800">
                   {book.title}
                 </h2>
-                <p className="text-gray-700">
+                <p className="text-gray-600">
                   Author:{" "}
                   {book.author_name
                     ? book.author_name.join(", ")
@@ -85,7 +83,7 @@ function Search() {
                       ))}
                     </ul>
                   </div>
-                )}
+ )}
               </li>
             ))}
           </ul>

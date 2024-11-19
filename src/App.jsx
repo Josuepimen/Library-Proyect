@@ -1,5 +1,5 @@
 import Search from "./assets/Components/Search"
-import imagen from "./assets/Imagen/libro.jpg"
+import imagen from "./assets/Imagen/cafe.jpg"
 
 function App() {
   return (
